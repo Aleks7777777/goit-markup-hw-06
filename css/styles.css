@@ -502,6 +502,20 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.close-button:hover::before,
+.close-button:hover::after {
+  background-color: var(--col--blue);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-button:focus::before,
+.close-button:focus::after {
+  background-color: var(--col--blue);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -601,9 +615,11 @@ button {
   left: 700px;
   top: 712px;
 
+  color: var(--colff--white);
   background: var(--col--blue);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: 0;
 }
 
 .send-form {
@@ -619,21 +635,50 @@ button {
   top: 12px;
   left: 12px;
 }
-.icon-modal .icon:focus,
-.icon-modal .icon:hover {
+.modal-input:focus + .icon-input,
+.modal-input:hover + .icon-input {
   color: var(--col--blue);
   border-color: var(--col--blue);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-/*.modal-input:focus,
+
+.modal-input:focus,
 .modal-input:hover {
-  color: var(--col--blue);
+  border-color: var(--col--blue);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-textarea:focus,
+.modal-textarea:hover {
   border-color: var(--col--blue);
 }
 
-/*.icon-input:focus,
-.icon-input:hover {
+.checkbox-treaty {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+
   color: var(--col--blue);
 }
+
+.ccheckbox-label {
+  position: relative;
+  -webkit-appearance: none;
+}
+.checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/);
+}
+
 /*!footer*/
 
 .footer {
