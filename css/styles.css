@@ -666,19 +666,41 @@ button {
   color: var(--col--blue);
 }
 
-.ccheckbox-label {
+.checkbox-label {
   position: relative;
-  -webkit-appearance: none;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+
+  color: var(--col--lgrey);
 }
-.checkbox {
+.title-checkbox {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 3px;
+  left: 7px;
   width: 16px;
   height: 15px;
-  background-image: url(../images/);
+  background-image: url(../images/check_off.svg);
 }
 
+.checkbox:checked + .title-checkbox {
+  background-image: url(../images/check_off.svg);
+}
+/*.checkbox:checked + .title-checkbox {
+  background-image: url(../images/check_on.svg);
+}*/
+
+.checkbox:focus-visible + .title-checkbox {
+  background-image: url(../images/check_off.svg);
+}
+.checkbox.link:hover + .title-checkbox,
+.checkbox:focus + .title-checkbox {
+  background-image: url(../images/check_on.svg);
+}
 /*!footer*/
 
 .footer {
