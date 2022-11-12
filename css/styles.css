@@ -652,6 +652,8 @@ button {
 .modal-textarea:focus,
 .modal-textarea:hover {
   border-color: var(--col--blue);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-treaty {
@@ -688,18 +690,12 @@ button {
 }
 
 .checkbox:checked + .title-checkbox {
-  background-image: url(../images/check_off.svg);
-}
-/*.checkbox:checked + .title-checkbox {
   background-image: url(../images/check_on.svg);
-}*/
+}
 
-.checkbox:focus-visible + .title-checkbox {
-  background-image: url(../images/check_off.svg);
-}
-.checkbox.link:hover + .title-checkbox,
-.checkbox:focus + .title-checkbox {
-  background-image: url(../images/check_on.svg);
+.checkbox-input:focus + .checkbox {
+  outline-style: auto;
+  outline-color: #000000;
 }
 /*!footer*/
 
