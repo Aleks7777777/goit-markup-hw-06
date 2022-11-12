@@ -619,6 +619,21 @@ button {
   top: 12px;
   left: 12px;
 }
+.icon-modal .icon:focus,
+.icon-modal .icon:hover {
+  color: var(--col--blue);
+  border-color: var(--col--blue);
+}
+/*.modal-input:focus,
+.modal-input:hover {
+  color: var(--col--blue);
+  border-color: var(--col--blue);
+}
+
+/*.icon-input:focus,
+.icon-input:hover {
+  color: var(--col--blue);
+}
 /*!footer*/
 
 .footer {
