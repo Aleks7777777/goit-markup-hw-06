@@ -552,23 +552,26 @@ button {
 }
 
 .from-title {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 12px;
 
   color: var(--col--black);
 }
 
 .modal-input {
   width: 100%;
+  height: 40px;
   padding: 11px 12px;
   margin-bottom: 10px;
-  border: 1px solid #d3d3d3;
   padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
 
 .title-span {
@@ -588,14 +591,21 @@ button {
   height: 120px;
   padding: 12px 16px;
   margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
 
+  color: rgba(117, 117, 117, 0.5);
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
 
 .title-checkbox {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -607,13 +617,18 @@ button {
 }
 
 .send-button {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+
   display: block;
   margin: auto;
   padding: 10px 52px;
   width: 200px;
   height: 50px;
-  left: 700px;
-  top: 712px;
 
   color: var(--colff--white);
   background: var(--col--blue);
@@ -673,6 +688,7 @@ button {
   display: flex;
   justify-content: center;
   gap: 8px;
+  margin-left: 15px;
 
   font-size: 14px;
   line-height: 24px;
@@ -683,7 +699,7 @@ button {
 .title-checkbox {
   position: absolute;
   top: 3px;
-  left: 7px;
+  left: 0px;
   width: 16px;
   height: 15px;
   background-image: url(../images/check_off.svg);
@@ -809,7 +825,7 @@ button {
 
 .form {
   margin-left: auto;
-  padding-top: 23px;
+  padding-top: 12px;
 }
 
 .test {
