@@ -159,7 +159,7 @@ button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.main-list .main-nav__link:after {
+.main-nav__list .main-nav__link:after {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -292,6 +292,10 @@ button {
   height: 120px;
 }
 
+.features .title {
+  margin-bottom: 10px;
+}
+
 /*!what-we-do*/
 
 .work-list {
@@ -312,7 +316,7 @@ button {
   position: relative;
 }
 
-.work-list__item p {
+.work-list__title {
   position: absolute;
   text-transform: uppercase;
   text-align: center;
@@ -331,34 +335,30 @@ button {
   background: rgba(47, 48, 58, 0.8);
 }
 
-.features .title {
-  margin-bottom: 10px;
-}
-
 /*!our_company*/
 
-.company {
+.team-list {
   display: flex;
   gap: 30px;
 }
 
-.our-company {
+.team-section {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.our-company .title {
+.team-section .team-list__title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
 }
 
-.company-container {
+.team {
   background-color: #f5f4fa;
 }
 
-.our-company .title-text {
+.team-section .team-list__text {
   text-align: center;
 
   font-size: 16px;
@@ -369,20 +369,20 @@ button {
   color: var(--col--lgrey);
 }
 
-.company-jpg {
+.team-list__item {
   background-color: var(--colff--white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.social-list {
+.team-list__social {
   display: flex;
   justify-content: center;
 
   gap: 10px;
 }
 
-.social-link {
+.social-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -394,13 +394,13 @@ button {
   color: #afb1b8;
 }
 
-.social-link:hover,
-.social-link:focus {
+.social-list__link:hover,
+.social-list__link:focus {
   color: var(--colff--white);
   background-color: var(--col--blue);
 }
 
-.social-link {
+.social-list__link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -420,8 +420,8 @@ button {
   gap: 30px;
 }
 
-.customers-link:hover,
-.customers-link:focus {
+.customers-list__link:hover,
+.customers-list__link:focus {
   color: var(--col--blue);
   border-color: var(--col--blue);
 }
@@ -431,14 +431,7 @@ button {
   margin-bottom: 50px;
 }
 
-.customers-link {
-  color: #afb1b8;
-  background-color: var(--colff--white);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.customers-link {
+.customers-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -447,7 +440,10 @@ button {
   border-radius: 4px;
 
   background-color: var(--colff--white);
-  border: 1px solid #afb1b8;
+  border: 1px solid;
+  color: #afb1b8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*!modal*/
@@ -487,7 +483,7 @@ button {
   transform: translate(-50%, -50%) scale(2);
 }
 
-.close-button {
+.modal-button__close {
   position: absolute;
 
   right: 8px;
@@ -500,15 +496,15 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.close-button:hover::before,
-.close-button:hover::after {
+.modal-button__close:hover::before,
+.modal-button__close:hover::after {
   background-color: var(--col--blue);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-button:focus::before,
-.close-button:focus::after {
+.modal-button__close:focus::before,
+.modal-button__close:focus::after {
   background-color: var(--col--blue);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -520,8 +516,8 @@ button {
   pointer-events: none;
 }
 
-.close-button::before,
-.close-button::after {
+.modal-button__close::before,
+.modal-button__close::after {
   position: absolute;
   content: "";
 
@@ -534,18 +530,18 @@ button {
   background-color: #000000;
 }
 
-.close-button::before {
+.modal-button__close::before {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.close-button::after {
+.modal-button__close::after {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.close-button:hover::after,
-.close-button:hover::before,
-.close-button:focus::after,
-.close-button:focus::before {
+.modal-button__close:hover::after,
+.modal-button__close:hover::before,
+.modal-button__close:focus::after,
+.modal-button__close:focus::before {
   transform: translate(-50%, -50%) rotate(0deg);
 }
 
@@ -562,7 +558,7 @@ button {
   color: var(--col--black);
 }
 
-.modal-input {
+.form-input {
   width: 100%;
   height: 40px;
   padding: 11px 12px;
@@ -572,7 +568,7 @@ button {
   border-radius: 4px;
 }
 
-.title-span {
+.form-span__title {
   display: block;
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -602,7 +598,7 @@ button {
   border-radius: 4px;
 }
 
-.title-checkbox {
+.modal-checkbox__title {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -614,7 +610,7 @@ button {
   color: var(--col--lgrey);
 }
 
-.send-button {
+.modal-send__button {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   letter-spacing: 0.06em;
@@ -635,29 +631,30 @@ button {
   border: 0;
 }
 
-.send-form {
+.modal-send {
   margin-top: 30px;
 }
 
-.icon-modal {
+.form-box__icon {
   position: relative;
 }
 
-.icon-input {
+.form-icon {
   position: absolute;
   top: 12px;
   left: 12px;
 }
-.modal-input:focus + .icon-input,
-.modal-input:hover + .icon-input {
+
+.form-input:focus + .form-icon,
+.form-input:hover + .form-icon {
   color: var(--col--blue);
   border-color: var(--col--blue);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:focus,
-.modal-input:hover {
+.form-input:focus,
+.form-input:hover {
   border-color: var(--col--blue);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -669,7 +666,7 @@ button {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox-treaty {
+.modal-checkbox__linc {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -681,7 +678,7 @@ button {
   color: var(--col--blue);
 }
 
-.checkbox-label {
+.modai-checkbox__label {
   position: relative;
   display: flex;
   justify-content: center;
@@ -694,7 +691,7 @@ button {
 
   color: var(--col--lgrey);
 }
-.title-checkbox {
+.modal-checkbox__title {
   position: absolute;
   top: 3px;
   left: 0px;
@@ -703,14 +700,10 @@ button {
   background-image: url(../images/check_off.svg);
 }
 
-.checkbox:checked + .title-checkbox {
+.modal-checkbox:checked + .modal-checkbox__title {
   background-image: url(../images/check_on.svg);
 }
 
-.checkbox-input:focus + .checkbox {
-  outline-style: auto;
-  outline-color: #000000;
-}
 /*!footer*/
 
 .footer {
@@ -724,7 +717,7 @@ button {
   padding-bottom: 60px;
 }
 
-.footer .header__logo {
+.footer__logo {
   text-decoration: none;
 
   color: var(--colff--white);
